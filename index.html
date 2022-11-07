@@ -1,27 +1,28 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Hw</title> 
-</head> 
-<body> 
-    <script> 
-        var age = prompt('Сколько вам лет?'); 
-        if (!Number.isInteger(+age) || +age < 0) { 
-            alert('Какой необычный возраст!'); 
-        } else { 
-            if (age.endsWith('11') || age.endsWith('12') || age.endsWith('13') || age.endsWith('14')) { 
-                alert('Вам ' + age + ' лет!'); 
-            } else if (age.endsWith('1')) { 
-                alert('Вам ' + age + ' год!'); 
-            } else if (age.endsWith('2') || age.endsWith('3') || age.endsWith('4')) { 
-                alert('Вам ' + age + ' года!'); 
-            } else { 
-                alert('Вам ' + age + ' лет!'); 
-            } 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hw</title>
+</head>
+<body>
+    <script>
+        var age = prompt('Сколько вам лет?');
+        var num = + age;
+        if (!Number.isInteger(num) || num < 0) {
+            alert('Какой необычный возраст!');
+        } else {
+            if ((num % 100) >= 11 && (num % 100) <= 14) {
+                alert('Вам ' + age + ' лет!');
+            } else if ((num % 10) == 1) {
+                alert('Вам ' + age + ' год!');
+            } else if ((num % 10) >= 2 && (num % 10) <= 4) {
+                alert('Вам ' + age + ' года!');
+            } else {
+                alert('Вам ' + age + ' лет!');
+            }
         } 
-    </script> 
-</body> 
+    </script>
+</body>
 </html>
